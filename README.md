@@ -24,3 +24,30 @@ To run the project, you will need the following libraries:
 
 ```bash
 pip install numpy pandas matplotlib scikit-learn keras basemap
+```
+
+## Model Architecture
+
+The neural network consists of the following layers:
+
+- **Input Layer**: Takes in the features `Timestamp`, `Latitude`, and `Longitude`.
+- **Hidden Layers**: Two dense layers with customizable activation functions (`sigmoid` and `relu` used).
+- **Output Layer**: A softmax layer predicting both `Magnitude` and `Depth`.
+- **Optimizer**: Stochastic Gradient Descent (SGD).
+- **Loss Function**: Squared Hinge Loss.
+- **Batch Size**: 10.
+- **Epochs**: 20.
+
+## Data Split
+
+The dataset was split into training and testing sets using an 80/20 ratio:
+
+- **Training Data**: 80% of the dataset.
+- **Testing Data**: 20% of the dataset.
+
+## Model Performance
+
+The model was evaluated on the test data with the following metrics:
+
+- **Test Loss**: 0.5041
+- **Test Accuracy**: 97.93%
